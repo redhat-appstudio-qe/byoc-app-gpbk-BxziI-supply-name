@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: ncwu
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ncwu
+    app.kubernetes.io/part-of: byoc-app-gpbk
+  name: ncwu
+spec:
+  rules:
+  - host: ncwu-byoc-ikbo-tenant.apps.d7eb92309d081613e7f4.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: ncwu
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
