@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: ncwu
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-ikbo-tenant/byoc-app-gpbk/ncwu@sha256:7d4d5e1aeea5b6634b4f340788e137c69e76e7ea5f56418526730732f854e99c
         name: my-java-quarkus
         ports:
         - containerPort: 8081
